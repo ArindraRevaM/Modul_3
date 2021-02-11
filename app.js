@@ -2,15 +2,15 @@ Vue.component('showform', {
     template: '#show-form',
     data(){
         return {
-            data: { nama: '', alamat : '', email: ''}
+            data: { judul: '', sutradara: '', genre: ''}
         }
     },
     methods: {
         simpan: function() {
             this.$emit('send-data', this.data);
-            this.data.nama = "";
-            this.data.alamat = "";
-            this.data.email = "";
+            this.data.judul = "";
+            this.data.sutradara = "";
+            this.data.genre = "";
         }
     }
 })
@@ -28,9 +28,9 @@ var app = new Vue({
     methods: {
         getData: function (value) {
             this.biodata = {
-                nama : value.nama,
-                alamat : value.alamat,
-                email : value.email
+                judul : value.judul,
+                sutradara : value.sutradara,
+                genre : value.genre
             }
         }
     }
